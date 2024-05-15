@@ -8,12 +8,16 @@ long long pow (int a, int b) {
 }
 
 long long S (int n, int x) {
-    if (n == 1) return x;
-    return pow(x, n) + S(n - 1, x);
+    if (n == 1) return pow(x, 2);
+    return pow(x, 2*n) + S(n - 1, x);
 }
 
 int main () {
     int n, x; cin >> n >> x;
+    if (n == 0) {
+        cout << 0;
+        return 0;
+    }
     cout << S(n, x);
     return 0;
 }
