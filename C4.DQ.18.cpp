@@ -10,8 +10,8 @@ double S (int n) {
 }
 
 int main () {
-    cout.precision(3);
+    cout.precision(4);
     int n; cin >> n;
-    cout << fixed << S(n);
+    cout << S(n);
     return 0;
 }
